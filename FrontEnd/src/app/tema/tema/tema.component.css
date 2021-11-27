@@ -1,0 +1,42 @@
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+  }
+  .signin-content {
+    padding: 60px 1rem;
+  }
+  .full-width-input {
+    width: 100%;
+  }
+
+  .espacamento{
+    padding-top: 10px;
+  }
+  .espacamento2{
+    margin-bottom: 10px;
+  }
+
+  .tamanho{
+    width: 100px;
+    margin: 3px;
+    margin-bottom: 20px;
+  }
+
+  .titulo{
+    font-weight: 600;
+    font-size: large;
+  }
+
+  .itenList{
+    font-size: 12px;
+  }
+  
+  .bloco{
+    height: 200px;
+    overflow: auto;
+  }
+  .divLista{
+    height: 20px;
+  }
+

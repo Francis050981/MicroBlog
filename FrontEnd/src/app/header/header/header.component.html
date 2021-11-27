@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="title-app">MicroBlog</span>
+    <span class="example-spacer"></span>
+  
+  <span class="fomatUser">Olá, {{nome}}</span>
+  
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>create</mat-icon>
+      <span>Criar Novo Post</span>
+    </button>
+    <button mat-menu-item (click)="carregaTema()">
+      <mat-icon>note_add</mat-icon>
+      <span>Criar Novo Tema</span>
+    </button>
+    <button mat-menu-item (click)="onLogout()">
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+  
+  
+  
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>

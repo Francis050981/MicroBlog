@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Atualize o tema selecionado</h1>
+<ng-template let-data>
+  Hello, {{data.nome}}
+</ng-template>
+<!--
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field>
+</div>
+-->
+<form [formGroup]="form" (ngSubmit)="alterarTema()">
+
+<mat-form-field class="full-width-input">
+  
+    <input matInput  placeholder="Altere o tema" formControlName="nome" value="{{data.nome}}">
+    <input type="hidden" formControlName="_id" value="{{data._id}}">
+    
+</mat-form-field>
+<div mat-dialog-actions class="divBotoes">
+  <button type="submit" mat-button color="primary">Alterar</button>
+  <button mat-button  type="button" color="primary" (click)="ExcluirTema(data)">Excluir</button>
+  <button mat-button type="button" (click)="fechaDialogAlterar()" color="primary">Sair</button>
+</div>
+</form>
+

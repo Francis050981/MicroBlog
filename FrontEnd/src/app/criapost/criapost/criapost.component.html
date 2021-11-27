@@ -1,0 +1,43 @@
+<div class="signin-content">
+    <mat-card>
+      <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="onSubmitCad()">
+          <p class="titulo">Crie sua nova Postagem</p>
+          <mat-form-field class="full-width-input">
+
+            
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Titulo</mat-label>
+              <input matInput  placeholder="titulo" formControlName="titulo" required>
+              <mat-error *ngIf="isFieldInvalid('titulo')">
+                Informar um Titulo;
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Edite sua postagem</mat-label>
+                <textarea matInput placeholder="Hoje é dia de escrever sobre..." formControlName="postagem" required></textarea>
+                <mat-error *ngIf="isFieldInvalid('postagem')">
+                  Informar uma postagem!
+                </mat-error>
+            </mat-form-field>
+
+
+            <h4>Tema</h4>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Selecione</mat-label>
+              <mat-select formControlName="tema">
+                <mat-option *ngFor="let item of tema$"  value="{{item._id}}">{{item.nome}}</mat-option>                
+              </mat-select>
+              <mat-error *ngIf="isFieldInvalid('tema')">
+                Selecione um tema!
+              </mat-error>
+            </mat-form-field>
+              
+          </mat-form-field>
+          <button class="tamanho" mat-raised-button color="primary">Cadastrar</button>
+          <a class="tamanho" mat-raised-button color="primary" routerLink="/postagem">Sair</a>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>

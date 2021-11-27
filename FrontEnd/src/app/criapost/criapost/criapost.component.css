@@ -1,0 +1,33 @@
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+  }
+  .signin-content {
+    padding: 60px 1rem;
+  }
+  .full-width-input {
+    width: 100%;
+  }
+
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .tamanho{
+    width: 100px;
+    margin: 3px;
+    margin-bottom: 20px;
+  }
+
+  .titulo{
+    font-weight: 600;
+    font-size: large;
+  }
