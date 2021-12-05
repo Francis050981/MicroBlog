@@ -81,7 +81,10 @@ export class AuthService {
             
             this.loggedIn.next(true);
             
-            this.router.navigate(['/postagem']);
+            this.router.navigate(['/postagem'])
+            .then(() => {
+              window.location.reload();
+            });
           
       });
       
@@ -95,7 +98,10 @@ export class AuthService {
     localStorage.removeItem('nome');
     localStorage.removeItem('token');
     localStorage.removeItem('id');
-    await this.router.navigate(['/']);
+    await this.router.navigate(['/'])
+    .then(() => {
+      window.location.reload();
+    });
 
   }
 

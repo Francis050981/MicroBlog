@@ -14,13 +14,12 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { EditaTemaRoutingModule } from './edita-tema-routing.module';
 import { EditaTemaComponent } from './edita-tema/edita-tema.component';
-import { DialogoAlteracaoComponent } from './edita-tema/dialogo-alteracao/dialogo-alteracao.component';
+
 
 
 @NgModule({
   declarations: [
-    EditaTemaComponent,
-    DialogoAlteracaoComponent
+    EditaTemaComponent
   ],
   imports: [
     CommonModule,

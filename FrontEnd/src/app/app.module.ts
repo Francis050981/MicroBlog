@@ -37,7 +37,7 @@ const mats = [
 @NgModule({
   declarations: [
     AppComponent,
-    //CadastraloginComponent,
+   // CadastraloginComponent,
     //EditaTemaComponent,
     //NovoPostComponent
   ],

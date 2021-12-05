@@ -34,7 +34,8 @@ const routes: Routes = [
   },
   {
     path: 'postagem',
-    loadChildren: () => import('./postagem/postagem.module').then(m => m.PostagemModule)
+    loadChildren: () => import('./postagem/postagem.module').then(m => m.PostagemModule),
+    
   },
   {
     path: 'criapost',

@@ -21,10 +21,12 @@ export class AppComponent implements OnInit{
     
     this.isLoggedIn$ =this.authService.isLoggedIn;
     
-    if(localStorage.getItem('nome')){ 
+    if(localStorage.getItem('nome')){
+      
       this.authService.getUsuario().subscribe(
         (data)=>
-          this.router.navigate(['/postagem'])
+          
+          this.nome = data.nome
           ,
         (error)=>this.nome = ''
         );
