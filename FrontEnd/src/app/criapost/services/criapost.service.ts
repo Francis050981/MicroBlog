@@ -42,5 +42,33 @@ export class CriapostService {
     });
 
   }
+  
+  BuscaAlteracao(id:string){
+    
+   return this.httpClient.get<Postagem[]>(this.APIPostagem+'/'+id,this.httpOptions)
+   .pipe(
+     tap(posts=>console.log('teste :',posts))
+   )
+  }
+
+  AlteracaoPostagem(postagems:Postagem){
+    
+    const body = {
+      autor:postagems.autor,
+      titulo:postagems.titulo,
+      postagem:postagems.postagem,
+      tema:postagems.tema
+    }
+    const url = this.APIPostagem+'/'+postagems._id;
+    console.log(url);
+    return this.httpClient.put<Postagem>(url,body,this.httpOptions).subscribe(data => {
+      console.log(data);
+      });
+    
+
+    
+  }
+ 
+  
 
 }

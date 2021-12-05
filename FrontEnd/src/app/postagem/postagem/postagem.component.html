@@ -13,16 +13,29 @@
                     matTooltip="Edite sua postagem"
                     matTooltipClass="example-tooltip-btn"
                     aria-label="Button that shows a red tooltip"
-                    routerLink="/edite"
+                    routerLink="/edita-post"
+                    [queryParams]="{id:post._id}"
+                    (click)="AbrirDialogAlterar(post)"
                 ><mat-icon>edit</mat-icon>
                 </button>
+                <!--
                 <button mat-button
                     class="example-icon" 
                     aria-label="Example icon-button with share icon"
                     matTooltip="Delete sua postagem"
                     matTooltipClass="example-tooltip-btn"
-                    aria-label="Button that shows a red tooltip"
-                    routerLink="/delete"
+                    aria-label="Button that shows a red tooltip"                    
+                    (click)="DeletarPostagem(post)"
+                ><mat-icon>delete_forever</mat-icon>
+                </button>
+                -->
+                <button mat-button
+                    class="example-icon" 
+                    aria-label="Example icon-button with share icon"
+                    matTooltip="Delete sua postagem"
+                    matTooltipClass="example-tooltip-btn"
+                    aria-label="Button that shows a red tooltip"                    
+                    (click)="AbrirDialogConfirmDel(post)"
                 ><mat-icon>delete_forever</mat-icon>
                 </button>
             </div>

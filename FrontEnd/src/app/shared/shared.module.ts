@@ -12,6 +12,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDividerModule} from '@angular/material/divider'; 
 import {MatListModule} from '@angular/material/list';
 import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
+import { EditPostDialogComponent } from './edit-post-dialog/edit-post-dialog.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+
 //import {MatDialogModule} from '@angular/material/dialog';
 
 
@@ -19,7 +22,9 @@ import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 @NgModule({
   declarations: [
     SuccessDialogComponent,
-    EditDialogComponent    
+    EditDialogComponent,
+    EditPostDialogComponent,
+    ConfirmDialogComponent    
   ],
   imports: [
     CommonModule,

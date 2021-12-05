@@ -18,6 +18,7 @@ import {MatMenuModule} from '@angular/material/menu';
 //import { NovoPostComponent } from './novoPost/novo-post/novo-post.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
+import { CadastraloginComponent } from './cadastralogin/cadastralogin/cadastralogin.component';
 //import { EditaTemaComponent } from './editaTema/edita-tema/edita-tema.component';
 const mats = [
   MatToolbarModule,
@@ -36,6 +37,7 @@ const mats = [
 @NgModule({
   declarations: [
     AppComponent,
+    //CadastraloginComponent,
     //EditaTemaComponent,
     //NovoPostComponent
   ],

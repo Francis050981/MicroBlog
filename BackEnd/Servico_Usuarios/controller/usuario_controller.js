@@ -111,7 +111,7 @@ exports.inserir = (req, res) => {
                 const token = jwt.sign({
                   id: usuario.id
                 }, 'Sen@crs', { expiresIn: "1h" });
-                res.status(201).json({token: token});
+                res.status(201).json({token: token,id:usuario._id});
               }
               else {
                   res.status(401).json({erro: "Usuario ou senha invalidos"});

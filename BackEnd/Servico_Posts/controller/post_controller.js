@@ -1,3 +1,4 @@
+const { get } = require("mongoose");
 const Post = require("../model/post")
 
 exports.listar = (req, res) => {
@@ -23,7 +24,7 @@ exports.atualizar = (req, res) => {
   const id = req.params.id;
   const postAtualizar = req.body;
 
-Produto.findByIdAndUpdate(id, postAtualizar, {new:true},
+Post.findByIdAndUpdate(id, postAtualizar, {new:true},
   (err, postAtualizado) => {
     if(err) {
       res.status(500).send(err);
@@ -59,17 +60,24 @@ exports.buscarPorId = (req, res) => {
 }
 */
 
-exports.buscarPorId = (req, res) => {
+/*exports.buscarPorId = (req, res) => {
   let id = req.params.id;
-  Post.findById(id).populate('tema').exec((err, post) => {
+  get.findById(id).populate('tema').exec((err, post) => {
       if(err)
           res.status(500).send(err);        
-      res.json(post);
+      res.json(get);
+  });    
+}*/
+
+
+exports.buscarPorId = (req, res) => {
+  let id = req.params.id;
+  Post.findById(id, (err, Post) => {
+      if(err)
+          res.status(500).send(err);        
+      res.json(Post);
   });    
 }
-
-
-
 
 
 

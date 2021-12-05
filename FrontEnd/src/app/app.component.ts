@@ -10,17 +10,29 @@ import { AuthService } from './login/auth.service';
 })
 export class AppComponent implements OnInit{
   title = 'AppMicroBlog';
-  nome = localStorage.getItem('nome');
+  //nome = localStorage.getItem('nome');
+  nome?: string;
+
+  
 
   isLoggedIn$: Observable<boolean>;
 
   constructor(private router: Router, private authService: AuthService){
     
     this.isLoggedIn$ =this.authService.isLoggedIn;
-       
+    
+    if(localStorage.getItem('nome')){ 
+      this.authService.getUsuario().subscribe(
+        (data)=>
+          this.router.navigate(['/postagem'])
+          ,
+        (error)=>this.nome = ''
+        );
+     }
+      
   }
 ngOnInit(){
-  var nome = this.nome || "";
+
 }
 
 

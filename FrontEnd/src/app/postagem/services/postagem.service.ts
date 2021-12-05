@@ -25,4 +25,13 @@ export class PostagemService {
       tap(postagem=>console.log(postagem))
     );
   }
+
+  deletar(posts:Postagem){
+    const url = this.API+'/'+posts._id;
+    return this.httpClient.delete<Postagem>(url,this.httpOptions).pipe(
+      tap(post=>console.log(post))
+    )
+
+
+  }
 }

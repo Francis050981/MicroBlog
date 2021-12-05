@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditeComponent } from './edite.component';
+import { EditaPostComponent } from './edita-post.component';
 
-describe('EditeComponent', () => {
-  let component: EditeComponent;
-  let fixture: ComponentFixture<EditeComponent>;
+describe('EditaPostComponent', () => {
+  let component: EditaPostComponent;
+  let fixture: ComponentFixture<EditaPostComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditeComponent ]
+      declarations: [ EditaPostComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditeComponent);
+    fixture = TestBed.createComponent(EditaPostComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
